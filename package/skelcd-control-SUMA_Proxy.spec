@@ -45,6 +45,7 @@ BuildRequires: diffutils
 Requires:       yast2 >= 4.1.41
 
 Provides:       system-installation() = SUMA_Proxy
+Provides:       system-installation() = SUMA_Retail_Branch
 
 #
 ######################################################################
