@@ -134,7 +134,7 @@ textdomain="control"
            </volumes>
         </partitioning>
         <software>
-          <default_patterns>base</default_patterns>
+          <default_patterns>base suma_proxy</default_patterns>
         </software>
         </system_role>
   
