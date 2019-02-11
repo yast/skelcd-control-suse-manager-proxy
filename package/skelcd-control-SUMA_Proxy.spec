@@ -44,8 +44,8 @@ BuildRequires: diffutils
 # Use FHS compliant path
 Requires:       yast2 >= 4.1.41
 
-Provides:       system-installation() = SUMA_Proxy
-Provides:       system-installation() = SUMA_Retail_Branch
+Provides:       system-installation() = SUSE-Manager-Proxy
+Provides:       system-installation() = SUSE-Manager-Retail-Branch-Server
 
 #
 ######################################################################
