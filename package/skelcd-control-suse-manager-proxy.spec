@@ -1,5 +1,5 @@
 #
-# spec file for package skelcd-control-SUMA_Proxy
+# spec file for package skelcd-control-suse-manager-proxy
 #
 # Copyright (c) 2016 SUSE LINUX GmbH, Nuernberg, Germany.
 #
@@ -20,14 +20,14 @@
 #
 # IMPORTANT: Please do not change the control file or this spec file
 #   in build service directly, use
-#   https://github.com/yast/skelcd-control-SUMA_Proxy repository
+#   https://github.com/yast/skelcd-control-suse-manager-proxy repository
 #
-#   See https://github.com/yast/skelcd-control-SUMA_Proxy/blob/master/CONTRIBUTING.md
+#   See https://github.com/yast/skelcd-control-suse-manager-proxy/blob/master/CONTRIBUTING.md
 #   for more details.
 #
 ######################################################################
 
-%define         skelcd_name SUMA_Proxy
+%define         skelcd_name suse-manager-proxy
 
 Name:           skelcd-control-%{skelcd_name}
 # xsltproc for converting SLES control file to SLES-for-VMware
@@ -50,22 +50,22 @@ Provides:       system-installation() = SUSE-Manager-Retail-Branch-Server
 #
 ######################################################################
 
-Url:            https://github.com/yast/skelcd-control-SUMA_Proxy
+Url:            https://github.com/yast/skelcd-control-suse-manager-proxy
 AutoReqProv:    off
 Version:        4.0.0
 Release:        0
-Summary:        SUMA_Proxy control file needed for installation
+Summary:        SUSE Manager Proxy control file needed for installation
 License:        MIT
 Group:          Metapackages
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
-Source0:        installation.SUMA_Proxy.xsl
+Source0:        installation.suse-manager-proxy.xsl
 
 # SUSEConnect does not build for i586 and s390 and is not supported on those architectures
 # bsc#1088552
 ExcludeArch:    %ix86 s390
 
 %description
-SUMA_Proxy control file needed for installation
+SUSE Manager Proxy control file needed for installation
 
 %prep
 
