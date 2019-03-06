@@ -45,7 +45,7 @@ textdomain="control"
              <windows_delete_mode>all</windows_delete_mode>
              <linux_delete_mode>all</linux_delete_mode>
              <other_delete_mode>all</other_delete_mode>
-             <lvm_vg_strategy>use_needed</lvm_vg_strategy>
+             <lvm_vg_strategy>use_available</lvm_vg_strategy>
            </proposal>
 
            <volumes config:type="list">
@@ -122,14 +122,52 @@ textdomain="control"
                <desired_size>2GiB</desired_size>
                <min_size>2GiB</min_size>
                <max_size>2GiB</max_size>
-             </volume>
+       </volume>
 
-             <!--
-               No home filesystem, so the option of a separate home is not even
-               offered to the user.
-               On the other hand, a separate data volume (optional or mandatory) could
-               be defined.
-             -->
+<!-- separate /srv: 40 GiB - unlimited -->
+            <volume>
+	    <mount_point>/srv</mount_point>
+                <fs_type>xfs</fs_type>
+
+		<proposed_configurable config:type="boolean">true</proposed_configurable>
+		<proposed config:type="boolean">true</proposed>
+
+                <desired_size config:type="disksize">40 GiB</desired_size>
+                <min_size config:type="disksize">40 GiB</min_size>
+                <max_size config:type="disksize">unlimited</max_size>
+                <max_size_lvm config:type="disksize">40 GiB</max_size_lvm>
+                <weight config:type="integer">40</weight>
+
+                <disable_order config:type="integer">1</disable_order>
+
+                <!-- if this volume is disabled we want "/" to increase -->
+                <fallback_for_desired_size>/</fallback_for_desired_size>
+                <fallback_for_max_size>/</fallback_for_max_size>
+                <fallback_for_max_size_lvm>/</fallback_for_max_size_lvm>
+                <fallback_for_weight>/</fallback_for_weight>
+             </volume>
+<!-- separate /var/cache: at least 100 GB -->
+            <volume>
+	     <mount_point>/var/cache</mount_point>
+                <fs_type>xfs</fs_type>
+
+                <proposed_configurable config:type="boolean">true</proposed_configurable>
+		<proposed config:type="boolean">true</proposed>
+
+                <desired_size config:type="disksize">100 GiB</desired_size>
+                <min_size config:type="disksize">100 GiB</min_size>
+                <max_size config:type="disksize">unlimited</max_size>
+                <max_size_lvm config:type="disksize">40 GiB</max_size_lvm>
+                <weight config:type="integer">50</weight>
+
+                <disable_order config:type="integer">1</disable_order>
+
+                <!-- if this volume is disabled we want "/" to increase -->
+                <fallback_for_desired_size>/</fallback_for_desired_size>
+                <fallback_for_max_size>/</fallback_for_max_size>
+                <fallback_for_max_size_lvm>/</fallback_for_max_size_lvm>
+                <fallback_for_weight>/</fallback_for_weight>
+             </volume>
 
            </volumes>
         </partitioning>
