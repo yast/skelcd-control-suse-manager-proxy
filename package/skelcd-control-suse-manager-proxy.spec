@@ -28,6 +28,7 @@
 ######################################################################
 
 %define         skelcd_name suse-manager-proxy
+%define         skelcd_name_retail suse-manager-retail-branch-server
 
 Name:           skelcd-control-%{skelcd_name}
 # xsltproc for converting SLES control file to SLES-for-VMware
@@ -45,14 +46,13 @@ BuildRequires: diffutils
 Requires:       yast2 >= 4.1.41
 
 Provides:       system-installation() = SUSE-Manager-Proxy
-Provides:       system-installation() = SUSE-Manager-Retail-Branch-Server
 
 #
 ######################################################################
 
 Url:            https://github.com/yast/skelcd-control-suse-manager-proxy
 AutoReqProv:    off
-Version:        4.0.1
+Version:        4.0.2
 Release:        0
 Summary:        SUSE Manager Proxy control file needed for installation
 License:        MIT
@@ -66,6 +66,25 @@ ExcludeArch:    %ix86 s390
 
 %description
 SUSE Manager Proxy control file needed for installation
+
+%package -n skelcd-control-%{skelcd_name_retail}
+
+# Use FHS compliant path
+Requires:       yast2 >= 4.1.41
+
+Provides:       system-installation() = SUSE-Manager-Retail-Branch-Server
+
+#
+######################################################################
+
+Url:            https://github.com/yast/skelcd-control-suse-manager-proxy
+AutoReqProv:    off
+Summary:        SUSE Manager Retail Branch Server control file needed for installation
+
+%description -n skelcd-control-%{skelcd_name_retail}
+SUSE Manager Retail Branch Server control file needed for installation
+
+
 
 %prep
 
@@ -86,9 +105,16 @@ diff -u %{skelcd_control_datadir}/SLES.xml installation.xml || :
 #
 mkdir -p $RPM_BUILD_ROOT/%{skelcd_control_datadir}
 install -m 644 installation.xml $RPM_BUILD_ROOT/%{skelcd_control_datadir}/%{skelcd_name}.xml
+install -m 644 installation.xml $RPM_BUILD_ROOT/%{skelcd_control_datadir}/%{skelcd_name_retail}.xml
 
 %files
 %defattr(644,root,root,755)
-%{skelcd_control_datadir}
+%dir %{skelcd_control_datadir}
+%{skelcd_control_datadir}/%{skelcd_name}.xml
+
+%files -n skelcd-control-%{skelcd_name_retail}
+%defattr(644,root,root,755)
+%dir %{skelcd_control_datadir}
+%{skelcd_control_datadir}/%{skelcd_name_retail}.xml
 
 %changelog

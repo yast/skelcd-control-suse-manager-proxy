@@ -56,7 +56,7 @@ textdomain="control"
                <fs_type>btrfs</fs_type>
                <desired_size>60GiB</desired_size>
                <min_size>10GiB</min_size>
-               <max_size>80GiB</max_size>
+               <max_size>100GiB</max_size>
                <!-- Always use snapshots, no matter what -->
                <snapshots config:type="boolean">true</snapshots>
                <snapshots_configurable config:type="boolean">false</snapshots_configurable>
@@ -132,10 +132,10 @@ textdomain="control"
 		<proposed_configurable config:type="boolean">true</proposed_configurable>
 		<proposed config:type="boolean">true</proposed>
 
-                <desired_size config:type="disksize">40 GiB</desired_size>
+                <desired_size config:type="disksize">100 GiB</desired_size>
                 <min_size config:type="disksize">40 GiB</min_size>
                 <max_size config:type="disksize">unlimited</max_size>
-                <max_size_lvm config:type="disksize">40 GiB</max_size_lvm>
+                <max_size_lvm config:type="disksize">200 GiB</max_size_lvm>
                 <weight config:type="integer">40</weight>
 
                 <disable_order config:type="integer">1</disable_order>
@@ -154,10 +154,10 @@ textdomain="control"
                 <proposed_configurable config:type="boolean">true</proposed_configurable>
 		<proposed config:type="boolean">true</proposed>
 
-                <desired_size config:type="disksize">100 GiB</desired_size>
+                <desired_size config:type="disksize">200 GiB</desired_size>
                 <min_size config:type="disksize">100 GiB</min_size>
                 <max_size config:type="disksize">unlimited</max_size>
-                <max_size_lvm config:type="disksize">40 GiB</max_size_lvm>
+                <max_size_lvm config:type="disksize">200 GiB</max_size_lvm>
                 <weight config:type="integer">50</weight>
 
                 <disable_order config:type="integer">1</disable_order>
@@ -188,7 +188,8 @@ textdomain="control"
           <label>SUSE Manager Proxy</label>
       </suma_proxy_role>
       <suma_proxy_role_description>
-          <label>• Now even for Retail :-)</label>
+	      <label>• Manager Proxy pattern
+• Configure from Manager Server</label>
       </suma_proxy_role_description>
       <xsl:copy>
         <xsl:apply-templates/>
