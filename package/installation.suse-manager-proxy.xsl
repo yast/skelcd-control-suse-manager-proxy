@@ -173,6 +173,9 @@ textdomain="control"
         </partitioning>
         <software>
           <default_patterns>base suma_proxy</default_patterns>
+          <!-- the cdata trick produces an empty string in the data
+               instead of omitting the key entirely -->
+          <optional_default_patterns><![CDATA[]]></optional_default_patterns>
         </software>
         </system_role>
   
