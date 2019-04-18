@@ -1,7 +1,7 @@
 #
 # spec file for package skelcd-control-suse-manager-proxy
 #
-# Copyright (c) 2016 SUSE LINUX GmbH, Nuernberg, Germany.
+# Copyright (c) 2019 SUSE LINUX GmbH, Nuernberg, Germany.
 #
 # All modifications and additions to the file contributed by third parties
 # remain the property of their copyright owners, unless otherwise agreed
@@ -12,7 +12,7 @@
 # license that conforms to the Open Source Definition (Version 1.9)
 # published by the Open Source Initiative.
 
-# Please submit bugfixes or comments via http://bugs.opensuse.org/
+# Please submit bugfixes or comments via https://bugs.opensuse.org/
 #
 
 
@@ -36,11 +36,11 @@ BuildRequires:  libxslt-tools
 # xmllint (for validation)
 BuildRequires:  libxml2-tools
 # Added skelcd macros
-BuildRequires: yast2-installation-control >= 4.1.5
+BuildRequires:  yast2-installation-control >= 4.1.5
 
 # Original SLES control file (FHS compliant)
-BuildRequires: skelcd-control-SLES >= 15.1.0
-BuildRequires: diffutils
+BuildRequires:  diffutils
+BuildRequires:  skelcd-control-SLES >= 15.1.0
 
 # Use FHS compliant path
 Requires:       yast2 >= 4.1.41
@@ -52,7 +52,7 @@ Provides:       system-installation() = SUSE-Manager-Proxy
 
 Url:            https://github.com/yast/skelcd-control-suse-manager-proxy
 AutoReqProv:    off
-Version:        4.0.3
+Version:        4.0.4
 Release:        0
 Summary:        SUSE Manager Proxy control file needed for installation
 License:        MIT
@@ -80,6 +80,7 @@ Provides:       system-installation() = SUSE-Manager-Retail-Branch-Server
 Url:            https://github.com/yast/skelcd-control-suse-manager-proxy
 AutoReqProv:    off
 Summary:        SUSE Manager Retail Branch Server control file needed for installation
+Group:          Metapackages
 
 %description -n skelcd-control-%{skelcd_name_retail}
 SUSE Manager Retail Branch Server control file needed for installation
