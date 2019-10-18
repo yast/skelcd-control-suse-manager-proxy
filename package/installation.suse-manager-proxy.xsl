@@ -173,9 +173,14 @@ textdomain="control"
         </partitioning>
         <software>
           <default_patterns>base suma_proxy</default_patterns>
-          <!-- the cdata trick produces an empty string in the data
-               instead of omitting the key entirely -->
-          <optional_default_patterns><![CDATA[]]></optional_default_patterns>
+          <!-- this is comment in the style sheet not commented into result -->
+          <xsl:comment>
+          the cdata trick produces an empty string in the data
+          instead of omitting the key entirely
+          </xsl:comment>
+          <xsl:element name="optional_default_patterns">
+            <xsl:text disable-output-escaping="yes">&lt;![CDATA[]]&gt;</xsl:text>
+          </xsl:element>
         </software>
         </system_role>
   
