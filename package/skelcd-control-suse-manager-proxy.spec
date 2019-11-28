@@ -52,6 +52,7 @@ Provides:       system-installation() = SUSE-Manager-Proxy
 
 Url:            https://github.com/yast/skelcd-control-suse-manager-proxy
 AutoReqProv:    off
+# IMPORTANT: This needs to be 4.1.0 as it is the SUSE Manager version!
 Version:        4.1.0
 Release:        0
 Summary:        SUSE Manager Proxy control file needed for installation
