@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Wed Feb 26 15:40:12 UTC 2020 - Ladislav Slezák <lslezak@suse.cz>
+
+- Added default preselected modules in offline installation
+  (jsc#SLE-8040)
+
+-------------------------------------------------------------------
 Wed Nov 27 17:22:05 UTC 2019 - Julio González Gil <jgonzalez@suse.com>
 
 - SUSE Manager version 4.1.0 (bsc#1157988)
