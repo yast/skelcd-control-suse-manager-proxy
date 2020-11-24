@@ -1,7 +1,7 @@
 #
 # spec file for package skelcd-control-suse-manager-proxy
 #
-# Copyright (c) 2019 SUSE LINUX GmbH, Nuernberg, Germany.
+# Copyright (c) 2020 SUSE LLC.
 #
 # All modifications and additions to the file contributed by third parties
 # remain the property of their copyright owners, unless otherwise agreed
@@ -60,8 +60,8 @@ Provides:       system-installation() = SUSE-Manager-Proxy
 
 Url:            https://github.com/yast/skelcd-control-suse-manager-proxy
 AutoReqProv:    off
-# IMPORTANT: This needs to be 4.1.0 as it is the SUSE Manager version!
-Version:        4.1.0
+# IMPORTANT: This needs to be 4.2.0 as it is the SUSE Manager version!
+Version:        4.2.0
 Release:        0
 Summary:        SUSE Manager Proxy control file needed for installation
 License:        MIT
