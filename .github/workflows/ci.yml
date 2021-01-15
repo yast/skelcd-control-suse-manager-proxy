@@ -18,5 +18,9 @@ jobs:
     - name: Install Prerequisites
       run: rake build_dependencies:install
 
+    # just for easier debugging...
+    - name: Inspect Installed Packages
+      run: rpm -qa | sort
+
     - name: Package Build
       run: yast-ci-ruby -o package
