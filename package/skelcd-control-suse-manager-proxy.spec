@@ -107,7 +107,7 @@ diff -u %{skelcd_control_datadir}/SLES.xml installation.xml || :
 #
 # Verify syntax
 #
-#xmllint --noout --relaxng /usr/share/YaST2/control/control.rng installation.xml
+xmllint --noout --relaxng /usr/share/YaST2/control/control.rng installation.xml
 
 %install
 #
