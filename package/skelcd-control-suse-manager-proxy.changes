@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Tue Oct 19 08:26:10 UTC 2021 - Julio González Gil <jgonzalez@suse.com>
+
+- Version 4.3.0
+  * SUSE Manager version 4.3.0 (bsc#1191807)
+
+-------------------------------------------------------------------
 Mon Nov 23 12:02:02 UTC 2020 - Julio González Gil <jgonzalez@suse.com>
 
 - SUSE Manager version 4.2.0 (bsc#1179134)
