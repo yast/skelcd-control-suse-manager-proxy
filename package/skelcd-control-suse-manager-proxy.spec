@@ -48,7 +48,7 @@ BuildRequires:  skelcd-control-SLES >= 15.2.0
 #!BuildIgnore: yast2-iscsi-client yast2-kdump yast2-multipath yast2-network yast2-nfs-client
 #!BuildIgnore: yast2-ntp-client yast2-proxy yast2-services-manager yast2-configuration-management
 #!BuildIgnore: yast2-packager yast2-slp yast2-trans-stats yast2-tune yast2-update
-#!BuildIgnore: yast2-users yast2-x11 rubygem(%{rb_default_ruby_abi}:byebug) yast2-rdp
+#!BuildIgnore: yast2-users yast2-x11 yast2-rdp
 
 # Use FHS compliant path
 Requires:       yast2 >= 4.1.41
