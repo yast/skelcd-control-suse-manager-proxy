@@ -36,16 +36,16 @@ textdomain="control"
   <xsl:template xml:space="preserve" match="n:system_role[n:id='minimal_role']">
         <system_role>
         <id>suma_proxy_role</id>
+        <order config:type="integer">1</order>
 
         <!-- the rest is overlaid over the feature sections and values. -->
         <partitioning>
            <proposal>
              <lvm config:type="boolean">true</lvm>
-             <encrypt config:type="boolean">false</encrypt>
-             <windows_delete_mode>all</windows_delete_mode>
-             <linux_delete_mode>all</linux_delete_mode>
-             <other_delete_mode>all</other_delete_mode>
-             <lvm_vg_strategy>use_available</lvm_vg_strategy>
+             <windows_delete_mode config:type="symbol">all</windows_delete_mode>
+             <linux_delete_mode config:type="symbol">all</linux_delete_mode>
+             <other_delete_mode config:type="symbol">all</other_delete_mode>
+             <lvm_vg_strategy config:type="symbol">use_available</lvm_vg_strategy>
            </proposal>
 
            <volumes config:type="list">
@@ -54,9 +54,9 @@ textdomain="control"
                <mount_point>/</mount_point>
                <!-- Enforce Btrfs for root by not offering any other option -->
                <fs_type>btrfs</fs_type>
-               <desired_size>60GiB</desired_size>
-               <min_size>10GiB</min_size>
-               <max_size>100GiB</max_size>
+               <desired_size config:type="disksize">60 GiB</desired_size>
+               <min_size config:type="disksize">10 GiB</min_size>
+               <max_size config:type="disksize">100 GiB</max_size>
                <!-- Always use snapshots, no matter what -->
                <snapshots config:type="boolean">true</snapshots>
                <snapshots_configurable config:type="boolean">false</snapshots_configurable>
@@ -119,9 +119,9 @@ textdomain="control"
              <volume>
                <mount_point>swap</mount_point>
                <fs_type>swap</fs_type>
-               <desired_size>2GiB</desired_size>
-               <min_size>2GiB</min_size>
-               <max_size>2GiB</max_size>
+               <desired_size config:type="disksize">2 GiB</desired_size>
+               <min_size config:type="disksize">2 GiB</min_size>
+               <max_size config:type="disksize">2 GiB</max_size>
        </volume>
 
 <!-- separate /srv: 40 GiB - unlimited -->
