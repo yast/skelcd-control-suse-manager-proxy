@@ -38,9 +38,10 @@ BuildRequires:  libxml2-tools
 # Added skelcd macros
 BuildRequires:  yast2-installation-control >= 4.1.5
 
-# Original SLES control file (skip registration)
+# Original SLES control file
+# (simplified workflow - https://github.com/yast/skelcd-control-SLES/pull/142)
 BuildRequires:  diffutils
-BuildRequires:  skelcd-control-SLES >= 15.2.0
+BuildRequires:  skelcd-control-SLES >= 15.4.1
 
 # for building we do not need all skelcd-control-SLES dependencies
 #!BuildIgnore: yast2-registration yast2-theme yast2 autoyast2 yast2-add-on yast2-buildtools
@@ -61,7 +62,7 @@ Provides:       system-installation() = SUSE-Manager-Proxy
 URL:            https://github.com/yast/skelcd-control-suse-manager-proxy
 AutoReqProv:    off
 # IMPORTANT: This needs to be 4.3.0 as it is the SUSE Manager version!
-Version:        4.3.0
+Version:        4.3.1
 Release:        0
 Summary:        SUSE Manager Proxy control file needed for installation
 License:        MIT
