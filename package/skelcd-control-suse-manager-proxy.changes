@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Tue Jan 10 09:38:24 UTC 2023 - Michael Calmer <mc@suse.com>
+
+- fix setting default module section in installation control file
+  (bsc#1203294)
+
+-------------------------------------------------------------------
 Mon Nov  7 12:32:34 UTC 2022 - Julio González Gil <jgonzalez@suse.com>
 
 - Version 4.4.0

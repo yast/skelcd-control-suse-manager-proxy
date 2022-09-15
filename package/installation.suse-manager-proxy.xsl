@@ -204,18 +204,13 @@ textdomain="control"
       </xsl:copy>
   </xsl:template>
 
-  <!-- add a new "software/default_modules" section just after the "textdomain" -->
-  <xsl:template xml:space="preserve" match="n:textdomain">
-    <xsl:copy>
-      <xsl:apply-templates/>
-    </xsl:copy>
-    <software>
-      <xsl:comment> the default preselected modules in offline installation </xsl:comment>
-      <default_modules config:type="list">
-        <default_module>sle-module-basesystem</default_module>
-        <default_module>sle-module-server-applications</default_module>
-      </default_modules>
-    </software>
+  <!-- modify the default modules -->
+  <xsl:template xml:space="preserve" match="n:software/n:default_modules">
+        <default_modules config:type="list">
+            <default_module>sle-module-basesystem</default_module>
+            <default_module>sle-module-server-applications</default_module>
+            <default_module>sle-module-suse-manager-proxy</default_module>
+        </default_modules>
   </xsl:template>
 
 </xsl:stylesheet>
