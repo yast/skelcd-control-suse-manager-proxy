@@ -1,7 +1,7 @@
 #
 # spec file for package skelcd-control-suse-manager-proxy
 #
-# Copyright (c) 2021 SUSE LLC
+# Copyright (c) 2022 SUSE LLC
 #
 # All modifications and additions to the file contributed by third parties
 # remain the property of their copyright owners, unless otherwise agreed
@@ -41,7 +41,7 @@ BuildRequires:  yast2-installation-control >= 4.1.5
 # Original SLES control file
 # (simplified workflow - https://github.com/yast/skelcd-control-SLES/pull/142)
 BuildRequires:  diffutils
-BuildRequires:  skelcd-control-SLES >= 15.4.1
+BuildRequires:  skelcd-control-SLES >= 15.5.0
 
 # for building we do not need all skelcd-control-SLES dependencies
 #!BuildIgnore: yast2-registration yast2-theme yast2 autoyast2 yast2-add-on yast2-buildtools
@@ -61,8 +61,8 @@ Provides:       system-installation() = SUSE-Manager-Proxy
 
 URL:            https://github.com/yast/skelcd-control-suse-manager-proxy
 AutoReqProv:    off
-# IMPORTANT: This needs to be 4.3.0 as it is the SUSE Manager version!
-Version:        4.3.1
+# IMPORTANT: This needs to be 4.4.0 as it is the SUSE Manager version!
+Version:        4.4.0
 Release:        0
 Summary:        SUSE Manager Proxy control file needed for installation
 License:        MIT
