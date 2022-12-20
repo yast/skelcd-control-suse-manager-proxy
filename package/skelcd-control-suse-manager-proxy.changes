@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Mon Nov  7 12:32:34 UTC 2022 - Julio González Gil <jgonzalez@suse.com>
+
+- Version 4.4.0
+  * SUSE Manager version 4.4.0 (bsc#1206557)
+
+-------------------------------------------------------------------
 Wed Apr 06 13:24:58 UTC 2022 - Ladislav Slezák <lslezak@suse.cz>
 
 - Bump version to 4.5.0 (bsc#1198109)
